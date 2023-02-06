@@ -2,17 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+
 public class PlayerController : Controller
 {
     public KeyCode moveForwardKey;
     public KeyCode moveBackwardKey;
     public KeyCode rotateClockwiseKey;
     public KeyCode rotateCounterClockwiseKey;
-
+    public KeyCode shootKey;
 
     // Start is called before the first frame update
     public override void Start()
     {
+        if (GameManager.Instance != null)
+        {
+            if (GameManager.Instance.players != null)
+            {
+                GameManager.Instance.players.Add(this);
+            }
+        }
+
         base.Start();
     }
 
@@ -22,6 +32,17 @@ public class PlayerController : Controller
         base.Update();
 
         ProcessInputs();
+    }
+
+    public void OnDestroy()
+    {
+        if (GameManager.Instance != null)
+        {
+            if (GameManager.Instance.players != null)
+            {
+                GameManager.Instance.players.Remove(this);
+            }
+        }
     }
 
     public void ProcessInputs()
@@ -44,6 +65,11 @@ public class PlayerController : Controller
         if (Input.GetKey(rotateCounterClockwiseKey))
         {
             pawn.RotateCounterClockwise();
+        }
+
+        if (Input.GetKeyDown(shootKey))
+        {
+            pawn.Shoot();
         }
     }
 }

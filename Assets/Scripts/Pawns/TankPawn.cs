@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class TankPawn : Pawn
 {
+    #region Variables
+    public Shooter shooter;
+    public GameObject shellPrefab;
+    public float fireForce;
+    public float damageDone;
+    public float lifespan;
+    #endregion Variables
+
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
+        shooter = GetComponent<Shooter>();
     }
 
     // Update is called once per frame
@@ -62,5 +71,10 @@ public class TankPawn : Pawn
         {
         Debug.LogWarning("Warning: No Mover in TankPawn.RotateCounterClockwise()!");
         }
+    }
+
+    public override void Shoot()
+    {
+        shooter.Shoot(shellPrefab, fireForce, damageDone, lifespan);
     }
 }
