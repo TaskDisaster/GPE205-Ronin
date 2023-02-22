@@ -73,6 +73,20 @@ public class TankPawn : Pawn
         }
     }
 
+    public override void RotateTowards(Vector3 targetPosition)
+    {
+        // Vector is location
+        // Gets the vector from the pawn to the target
+        Vector3 vectorToTarget = targetPosition - transform.position;
+
+        // Quaternion is rotation
+        // Gets the rotation from the pawn to the target
+        Quaternion targetRotation = Quaternion.LookRotation(vectorToTarget, Vector3.up);
+
+        // Sets the rotation of the pawn to the target using the turnSpeed multiplied by delta time
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+    }
+
     public override void Shoot()
     {
         shooter.Shoot(shellPrefab, fireForce, damageDone, lifespan);
