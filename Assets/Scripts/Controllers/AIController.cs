@@ -108,9 +108,9 @@ public class AIController : Controller
         // Shoot
         Shoot();
     }
-    #endregion Behavior
+    #endregion States
 
-    #region
+    #region Behavior
     public void Seek(GameObject target)
     {
         // RotateTowards the Function
@@ -130,7 +130,15 @@ public class AIController : Controller
     public void Seek(Pawn targetPawn)
     {
         // Seek that pawn's transform!
-        //pawn.RotateTowards(targetPawn); FIX THIS!!=================================
+        pawn.RotateTowards(targetPawn.transform.position);
+    }
+
+    public void Seek(Vector3 targetPosition)
+    {
+        // Rotate towards the position
+        pawn.RotateTowards(targetPosition);
+        // Move Forward
+        pawn.MoveForward();
     }
 
     public void Shoot()
@@ -148,7 +156,7 @@ public class AIController : Controller
         // Find the vector we could travel down in order to flee
         Vector3 fleeVector = vectorAwayFromTarget.normalized * fleeDistance;
         // Seek the point that is "fleeVector" away from our current position
-        //Seek(pawn.transform.position + fleeVector); FIX THIS!!!=====================
+        Seek(pawn.transform.position + fleeVector);
     }
     #endregion
 }
