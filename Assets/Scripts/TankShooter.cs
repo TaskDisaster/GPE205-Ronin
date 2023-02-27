@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class TankShooter : Shooter
 {
-    public Transform firepointTransform;
+    #region variables
+    public Transform firepointTransform; // Firing point for bullets
+    private NoiseMaker noiseMaker;
+    #endregion
 
     // Start is called before the first frame update
     public override void Start()
     {
-
+        noiseMaker = GetComponent<NoiseMaker>();
     }
 
     // Update is called once per frame
@@ -37,6 +40,12 @@ public class TankShooter : Shooter
         if (rb != null)
         {
             rb.AddForce(firepointTransform.forward * fireForce);
+        }
+
+        // Make some noise
+        if (noiseMaker != null)
+        {
+            noiseMaker.volumeDistance = 20;
         }
 
         Destroy(newShell, lifeSpan);

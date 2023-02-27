@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1303190700}
   - component: {fileID: 1303190705}
   - component: {fileID: 1056823805851836126}
+  - component: {fileID: -1210183279557700432}
   m_Layer: 0
   m_Name: UATank
   m_TagString: Untagged
@@ -165,6 +166,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firepointTransform: {fileID: 7141561809567752200}
+--- !u!114 &-1210183279557700432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426477335808253199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34944b974ac2eb4ea3cb572c00afd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeDistance: 0
+  decayPerFrame: 1
 --- !u!1 &6696284521523323612
 GameObject:
   m_ObjectHideFlags: 0
