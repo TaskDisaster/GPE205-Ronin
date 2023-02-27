@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1140014224812801261}
   - component: {fileID: 106031691596791426}
   - component: {fileID: -8128706870555701538}
+  - component: {fileID: 4433928957802593060}
   m_Layer: 0
   m_Name: EnemyTank
   m_TagString: Untagged
@@ -180,12 +181,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pawn: {fileID: 1140014224812801264}
   isLooping: 0
+  isSeeing: 1
+  isHearing: 1
   currentState: 0
   fleeDistance: 0
   waypoints: []
   waypointStopDistance: 0
   hearingDistance: 0
+  fieldOfView: 0
+  maxViewDistance: 0
   target: {fileID: 0}
+--- !u!114 &4433928957802593060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024923774184979795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b820b7c39801aef439775fcd3ff4ba3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
 --- !u!1 &5998759170540487296
 GameObject:
   m_ObjectHideFlags: 0

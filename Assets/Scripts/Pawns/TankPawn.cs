@@ -10,6 +10,7 @@ public class TankPawn : Pawn
     public float fireForce;
     public float damageDone;
     public float lifespan;
+    public float fireCooldown = 1.5f;
     #endregion Variables
 
     // Start is called before the first frame update

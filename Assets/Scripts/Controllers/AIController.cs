@@ -81,6 +81,7 @@ public class AIController : Controller
             // And there are players in it
             if (GameManager.Instance.players.Count > 0)
             {
+                if (GameManager.Instance.players[0].pawn.gameObject != null)
                 // Then target the gameObject of the pawn of the first player controller in the list
                 target = GameManager.Instance.players[0].pawn.gameObject;
             }

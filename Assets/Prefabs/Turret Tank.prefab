@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 6725347158299029628}
   - component: {fileID: 6052745802567922195}
   - component: {fileID: 5946756459349101727}
+  - component: {fileID: 2843776943220559932}
   m_Layer: 0
   m_Name: Turret Tank
   m_TagString: Untagged
@@ -170,7 +171,7 @@ MonoBehaviour:
   shooter: {fileID: 0}
   shellPrefab: {fileID: 3254085822054655454, guid: 451b9419ad56e954b96913b4cdf50e06, type: 3}
   fireForce: 1000
-  damageDone: 10
+  damageDone: 5
   lifespan: 1.5
 --- !u!114 &6725347158299029628
 MonoBehaviour:
@@ -221,3 +222,16 @@ MonoBehaviour:
   fieldOfView: 90
   maxViewDistance: 15
   target: {fileID: 0}
+--- !u!114 &2843776943220559932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5665218336142307778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b820b7c39801aef439775fcd3ff4ba3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10

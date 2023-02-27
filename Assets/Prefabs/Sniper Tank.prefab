@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 8847636962299421594}
   - component: {fileID: 8386697933607510517}
   - component: {fileID: 5530434147745045660}
+  - component: {fileID: 4163461917804747832}
   m_Layer: 0
   m_Name: Sniper Tank
   m_TagString: Untagged
@@ -170,7 +171,7 @@ MonoBehaviour:
   shooter: {fileID: 0}
   shellPrefab: {fileID: 3254085822054655454, guid: 451b9419ad56e954b96913b4cdf50e06, type: 3}
   fireForce: 1000
-  damageDone: 10
+  damageDone: 20
   lifespan: 1.5
 --- !u!114 &8847636962299421594
 MonoBehaviour:
@@ -221,3 +222,16 @@ MonoBehaviour:
   fieldOfView: 30
   maxViewDistance: 30
   target: {fileID: 0}
+--- !u!114 &4163461917804747832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7566825161189171748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b820b7c39801aef439775fcd3ff4ba3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10

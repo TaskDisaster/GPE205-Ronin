@@ -1257,7 +1257,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508572135}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 15.48, y: -0.07, z: -1.74}
+  m_LocalPosition: {x: 15.36, y: -0.07, z: -1.6}
   m_LocalScale: {x: 1, y: 2.977, z: 6.997}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1559,6 +1559,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chicken Tank
       objectReference: {fileID: 0}
+    - target: {fileID: 4413794488038233236, guid: 0479fb9b6918e1645831a96eeb0d96aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934095414549256081, guid: 0479fb9b6918e1645831a96eeb0d96aa, type: 3}
+      propertyPath: isSeeing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934095414549256081, guid: 0479fb9b6918e1645831a96eeb0d96aa, type: 3}
+      propertyPath: isHearing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8934095414549256081, guid: 0479fb9b6918e1645831a96eeb0d96aa, type: 3}
       propertyPath: fieldOfView
       value: 90
@@ -1776,11 +1788,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5665218336142307778, guid: fb43b84059e3c92489aba33e42d9e868, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5946756459349101727, guid: fb43b84059e3c92489aba33e42d9e868, type: 3}
       propertyPath: hearingDistance
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052745802567922195, guid: fb43b84059e3c92489aba33e42d9e868, type: 3}
+      propertyPath: fireCooldown
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb43b84059e3c92489aba33e42d9e868, type: 3}
