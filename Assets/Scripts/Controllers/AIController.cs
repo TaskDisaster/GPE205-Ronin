@@ -185,7 +185,7 @@ public class AIController : Controller
         
     }
 
-    protected bool IsHasTarget()
+    protected bool HasTarget()
     {
         // return true if we hava target, false if we don't
         return (target != null);
@@ -203,13 +203,17 @@ public class AIController : Controller
         // Iterate through them one at a time
         foreach (Pawn tank in allTanks)
         {
-            // If this one is closer than the closest
-            if (Vector3.Distance(pawn.transform.position, tank.transform.position) < closestTankDistance) 
-            {
-                // It is the closest tank
-                closestTank = tank;
-                closestTankDistance = Vector3.Distance(pawn.transform.position, closestTank.transform.position);
-            }
+            // Check if it's a player tankPrefab
+            if (tank == GameManager.Instance.tankPawnPrefab)
+            { 
+                // If this one is closer than the closest
+                if (Vector3.Distance(pawn.transform.position, tank.transform.position) < closestTankDistance) 
+                {
+                    // It is the closest tank
+                    closestTank = tank;
+                    closestTankDistance = Vector3.Distance(pawn.transform.position, closestTank.transform.position);
+                }
+            }    
         }
 
         // Target the closest tank
@@ -259,7 +263,7 @@ public class AIController : Controller
     #region Behavior
     public void ChooseTarget()
     {
-        TargetPlayerOne();
+        TargetNearestTank();
     }
 
     public virtual void Seek(GameObject target)
@@ -305,7 +309,7 @@ public class AIController : Controller
         // Find the Vector away from our target by multiplying by -1
         Vector3 vectorAwayFromTarget = -vectorToTarget;
 
-        // Find the distance the target is from the player
+        // Find the distance the target is from the pawn
         float targetDistance = Vector3.Distance(target.transform.position, pawn.transform.position);
         // Get the percentage of our FleeDistance
         float percentOfFleeDistance = targetDistance / fleeDistance;

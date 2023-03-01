@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 4481721687005315749}
   m_Layer: 0
   m_Name: UATank
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,6 +142,7 @@ MonoBehaviour:
   fireForce: 1000
   damageDone: 10
   lifespan: 1.5
+  fireCooldown: 0.2
 --- !u!114 &1303190705
 MonoBehaviour:
   m_ObjectHideFlags: 0

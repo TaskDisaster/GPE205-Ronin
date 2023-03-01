@@ -34,12 +34,12 @@ public class AIChicken : AIController
                 {
                     if (CanSee(target))
                     {
-                        //ChangeState(AIState.Chase);
+                        ChangeState(AIState.Chase);
                     }
                 }
                 if (CanHear(target))
                 {
-                    //ChangeState(AIState.Chase);
+                    ChangeState(AIState.Chase);
                 }
                 break;
 

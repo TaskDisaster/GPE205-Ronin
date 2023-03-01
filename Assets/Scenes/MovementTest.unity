@@ -685,6 +685,7 @@ MonoBehaviour:
   tankPawnPrefab: {fileID: 1426477335808253199, guid: 64319ec2b423b8148aaaa287665d88ca, type: 3}
   playerSpawnTransform: {fileID: 1674669950}
   players: []
+  ai: []
 --- !u!4 &1065245202
 Transform:
   m_ObjectHideFlags: 0
@@ -790,7 +791,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150486432}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 2.67, y: -0.07, z: -12.43}
+  m_LocalPosition: {x: 2.67, y: -0.07, z: -16.77}
   m_LocalScale: {x: 1, y: 2.977, z: 6.997}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1561,7 +1562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4413794488038233236, guid: 0479fb9b6918e1645831a96eeb0d96aa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8934095414549256081, guid: 0479fb9b6918e1645831a96eeb0d96aa, type: 3}
       propertyPath: isSeeing
@@ -1569,7 +1570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8934095414549256081, guid: 0479fb9b6918e1645831a96eeb0d96aa, type: 3}
       propertyPath: isHearing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8934095414549256081, guid: 0479fb9b6918e1645831a96eeb0d96aa, type: 3}
       propertyPath: fieldOfView
@@ -1637,6 +1638,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5541177874107640216, guid: 01c10ab568d1a58438979bc6d652f97b, type: 3}
+      propertyPath: isSeeing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541177874107640216, guid: 01c10ab568d1a58438979bc6d652f97b, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 347063631}
@@ -1695,7 +1700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7082213639412480158, guid: ebaffde40510b5f49a5955dbea7d7e34, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7082213639412480158, guid: ebaffde40510b5f49a5955dbea7d7e34, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1703,7 +1708,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7082213639412480158, guid: ebaffde40510b5f49a5955dbea7d7e34, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7082213639412480158, guid: ebaffde40510b5f49a5955dbea7d7e34, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1715,7 +1720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7082213639412480158, guid: ebaffde40510b5f49a5955dbea7d7e34, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7082213639412480158, guid: ebaffde40510b5f49a5955dbea7d7e34, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1788,7 +1793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5665218336142307778, guid: fb43b84059e3c92489aba33e42d9e868, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5946756459349101727, guid: fb43b84059e3c92489aba33e42d9e868, type: 3}
       propertyPath: hearingDistance

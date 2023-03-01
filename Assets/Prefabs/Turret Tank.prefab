@@ -173,6 +173,7 @@ MonoBehaviour:
   fireForce: 1000
   damageDone: 5
   lifespan: 1.5
+  fireCooldown: 1.5
 --- !u!114 &6725347158299029628
 MonoBehaviour:
   m_ObjectHideFlags: 0
